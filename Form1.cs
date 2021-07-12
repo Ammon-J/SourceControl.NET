@@ -16,5 +16,10 @@ namespace GettingToKnowSourceControl
         {
             InitializeComponent();
         }
+
+        private void DoubleBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
