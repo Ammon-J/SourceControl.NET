@@ -49,5 +49,36 @@ namespace GettingToKnowSourceControl
         {
             valueLabel.Text = String.Format("{0:n0}", buttonValue);
         }
+
+        private void GetCompBtn_Click(object sender, EventArgs e)
+        {
+            // Genrate a random number to get a compliment
+            Random rand = new Random();
+            int index = rand.Next(4);
+
+            // Get a compliment
+            String compliment = GetCompliment(index);
+
+            // Display the comliment
+            DisplayCompliment(compliment);
+        }
+
+        public String GetCompliment(int index)
+        {
+            // Store the compliments
+            List<String> compliments = new List<string>();
+
+            compliments.Add("You are looking mighty fine today!");
+            compliments.Add("I bet you make babies smile!");
+            compliments.Add("You're like sunshine on a rainy day!");
+            compliments.Add("The sun squints when it looks at you!");
+
+            return compliments.ElementAt(index);
+        }
+
+        public void DisplayCompliment(String compliment)
+        {
+            compLabel.Text = compliment;
+        }
     }
 }
