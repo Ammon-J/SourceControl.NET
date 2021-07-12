@@ -56,14 +56,11 @@ namespace GettingToKnowSourceControl
             Random rand = new Random();
             int index = rand.Next(4);
 
-            // Get a compliment
-            String compliment = GetCompliment(index);
-
-            // Display the comliment
-            DisplayCompliment(compliment);
+            // Get a compliment and display it on the form
+            GetCompliment(index);
         }
 
-        public String GetCompliment(int index)
+        public void GetCompliment(int index)
         {
             // Store the compliments
             List<String> compliments = new List<string>();
@@ -73,7 +70,8 @@ namespace GettingToKnowSourceControl
             compliments.Add("You're like sunshine on a rainy day!");
             compliments.Add("The sun squints when it looks at you!");
 
-            return compliments.ElementAt(index);
+            // Display the comliment
+            DisplayCompliment(compliments.ElementAt(index));
         }
 
         public void DisplayCompliment(String compliment)
